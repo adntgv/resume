@@ -1,0 +1,68 @@
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-skyblue}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\hyphenpenalty=10000
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+\name{Aidyn}{Torgayev}
+\mobile{8 (025) 908-93-25}
+\email{aidyn.torgayev@gmail.com}
+\github{adntgv}
+\linkedin{aidyntorgayev}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvheader
+
+\makecvfooter
+  {\today}
+  {Aidyn Torgayev~~~·~~~aidyn.torgayev@gmail.com}
+  {\thepage}
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{blocks/summary.tex}
+\vspace{-6.0mm}
+\begin{minipage}[t]{0.64\textwidth}
+\input{blocks/education.tex}
+\input{blocks/experience.tex}
+\end{minipage}
+\begin{minipage}[t]{0.02\textwidth}
+\hspace{0pt}
+             
+\end{minipage}
+\begin{minipage}[t]{0.34\textwidth}
+\input{blocks/extra.tex}
+\input{blocks/skills.tex}
+\end{minipage}
+
+%-------------------------------------------------------------------------------
+\end{document}
